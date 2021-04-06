@@ -1,0 +1,783 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale =1.0" />
+    <title> Company Name</title>
+
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.0.js" integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+            $('.first').addClass('active');
+
+            $('.navbar-nav .nav-link').click(function () {
+                $('.first').removeClass('active');
+                $('.navbar-nav .nav-link').removeClass('active');
+                $(this).addClass('active');
+            });
+        });
+
+    </script>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'poppins', sans-serif;
+            background-image: url('images/bg.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            color: rgb( 242, 242, 242 );
+        }
+
+        .icon-pack1 {
+            position: fixed;
+            z-index: 100;
+            top: 30%;
+            right: 0%;
+            display: flex;
+            flex-direction: column;
+        }
+
+            .icon-pack1 ul {
+                display: flex;
+                flex-direction:column;
+            }
+
+        .icon-pack1 ul li {
+            list-style-type: none;
+            margin: 15px;
+            padding-right: 5px;
+            display: inline-block;
+        }
+
+            .icon-pack1 ul li a {
+                position: relative;
+                display: block;
+                width: 50px;
+                height: 50px;
+                text-align: center;
+                line-height: 50px;
+                color: #666;
+                font-size: 30px;
+                border-radius: 50%;
+                background-color: #333;
+                transition: .5s;
+                -webkit-transition: .5s;
+                -moz-transition: .5s;
+                -o-transition: .5s;
+            }
+
+                .icon-pack1 ul li a:before {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    display: block;
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 50%;
+                    z-index: -1;
+                    transition: .5s;
+                    -webkit-transition: .5s;
+                    -moz-transition: .5s;
+                    -o-transition: .5s;
+                    -webkit-transform: scale(.9);
+                    -moz-transform: scale(.9);
+                    -o-transform: scale(.9);
+                }
+
+            .icon-pack1 ul li:nth-child(1) a:before {
+                background-color: #3b5999;
+            }
+
+            .icon-pack1 ul li:nth-child(2) a:before {
+                background-color: #dd4b39;
+            }
+
+            .icon-pack1 ul li:nth-child(3) a:before {
+                background-color: #55acee;
+            }
+
+           
+            .icon-pack1 ul li:nth-child(1) a:hover {
+                color: #3b5999;
+                box-shadow: 0 0 5px #3b5999;
+                -webkit-box-shadow: 0 0 5px #3b5999;
+                -moz-box-shadow: 0 0 5px #3b5999;
+                -o-box-shadow: 0 0 5px #3b5999;
+                text-shadow: 0 0 5px #3b5999;
+                -webkit-text-shadow: 0 0 5px #3b5999;
+                -moz-text-shadow: 0 0 5px #3b5999;
+                -o-text-shadow: 0 0 5px #3b5999;
+            }
+
+            .icon-pack1 ul li:nth-child(2) a:hover {
+                color: #dd4b39;
+                box-shadow: 0 0 5px #dd4b39;
+                -webkit-box-shadow: 0 0 5px #dd4b39;
+                -moz-box-shadow: 0 0 5px #dd4b39;
+                -o-box-shadow: 0 0 5px #dd4b39;
+                text-shadow: 0 0 5px #dd4b39;
+                -webkit-text-shadow: 0 0 5px #dd4b39;
+                -moz-text-shadow: 0 0 5px #dd4b39;
+                -o-text-shadow: 0 0 5px #dd4b39;
+            }
+
+            .icon-pack1 ul li:nth-child(3) a:hover {
+                color: #55acee;
+                box-shadow: 0 0 5px #55acee;
+                -webkit-box-shadow: 0 0 5px #55acee;
+                -moz-box-shadow: 0 0 5px #55acee;
+                -o-box-shadow: 0 0 5px #55acee;
+                text-shadow: 0 0 5px #55acee;
+                -webkit-text-shadow: 0 0 5px #55acee;
+                -moz-text-shadow: 0 0 5px #55acee;
+                -o-text-shadow: 0 0 5px #55acee;
+            }
+            
+            .icon-pack1 ul li:nth-child(1) a:hover:before {
+                -webkit-transform: scale(1.1);
+                -moz-transform: scale(1.1);
+                -o-transform: scale(1.1);
+                box-shadow: 0 0 15px #3b5999;
+                -webkit-box-shadow: 0 0 15px #3b5999;
+                -moz-box-shadow: 0 0 15px #3b5999;
+                -o-box-shadow: 0 0 15px #3b5999;
+            }
+
+            .icon-pack1 ul li:nth-child(2) a:hover:before {
+                -webkit-transform: scale(1.1);
+                -moz-transform: scale(1.1);
+                -o-transform: scale(1.1);
+                box-shadow: 0 0 15px #dd4b39;
+                -webkit-box-shadow: 0 0 15px #dd4b39;
+                -moz-box-shadow: 0 0 15px #dd4b39;
+                -o-box-shadow: 0 0 15px #dd4b39;
+            }
+
+            .icon-pack1 ul li:nth-child(3) a:hover:before {
+                -webkit-transform: scale(1.1);
+                -moz-transform: scale(1.1);
+                -o-transform: scale(1.1);
+                box-shadow: 0 0 15px #55acee;
+                -webkit-box-shadow: 0 0 15px #55acee;
+                moz-box-shadow: 0 0 15px #55acee;
+                -o-box-shadow: 0 0 15px #55acee;
+            }
+            
+        #footer{
+            padding: 10px;
+            background-color: black;
+        }
+
+        #contact {
+            margin: 0;
+            padding: 0;            
+            background-image: url('images/contact.jpg');
+            background-size:auto;
+            background-attachment: fixed;
+            background-position: center;            
+        }
+
+        .mz-module:hover .ot-circle.color1 {
+            color: #C54A4A;
+        }
+
+        .mz-module:hover .ot-circle.color2 {
+            color: #6091DC;
+        }
+
+        .mz-module:hover .ot-circle.color3 {
+            color: #6EB377;
+        }
+
+        .mz-module:hover .ot-circle.color4 {
+            color: #FCBE03;
+        }
+        .mz-module:hover .ot-circle.color1 {
+            color: #C54A4A;
+        }
+
+        .mz-module:hover .ot-circle.color2 {
+            color: #6091DC;
+        }
+
+        .mz-module:hover .ot-circle.color3 {
+            color: #6EB377;
+        }
+
+        .mz-module:hover .ot-circle.color4 {
+            color: #FCBE03;
+        }
+        .mz-module:hover .ot-circle.color1 {
+            color: #C54A4A;
+        }
+
+        .mz-module:hover .ot-circle.color2 {
+            color: #6091DC;
+        }
+
+        .mz-module:hover .ot-circle.color3 {
+            color: #6EB377;
+        }
+
+        .mz-module:hover .ot-circle.color4 {
+            color: #FCBE03;
+        }
+
+        .mz-module {
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .mz-module-about {
+            border: 1px solid #E6E6EA;
+            min-height: 280px;
+            padding: 20px;
+            background-color: #EFEFF1;
+        }
+
+            .mz-module-about h3 {
+                font-weight: 500;
+                font-size: 19px;
+                /* text-transform: uppercase; */
+                color: #424242;
+                /* letter-spacing: 2px; */
+                margin-bottom: 20px;
+            }
+
+        .dark-bg .mz-module-about h3 {
+            color: #FFFFFF;
+        }
+
+        .mz-module-about p {
+            font-size: 15px;
+            font-weight: 300;
+            line-height: 22px;
+            color: #848484;
+        }
+
+        .mz-module-button {
+            background-color: #B6B6C3;
+            padding: 15px;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 12px;
+            display: block;
+            position: absolute;
+            bottom: 0px;
+            left: 0;
+            right: 0;
+            opacity: 0;
+            color: #fff;
+            -webkit-transition: all .3s;
+            -moz-transition: all .3s;
+            transition: all .3s;
+        }
+
+        .mz-module:hover .mz-module-button {
+            bottom: -45px;
+            opacity: 1;
+        }
+
+        .mz-module-button:hover {
+            background-color: #1a1a1a;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .mz-module-button {
+            color: #fff;
+        }
+
+        .ot-circle {
+            height: 95px;
+            width: 95px;
+            text-align: center;
+            line-height: 98px;
+            color: #60635ce8;
+            margin: 0 2px 4px;
+            font-size: 75px;
+            -webkit-transition: all .3s;
+            -moz-transition: all .3s;
+            transition: all .3s;
+        }
+
+        #back-top {
+            position: fixed;
+            z-index: 1000;            
+            bottom: 40px;
+            right: 50px;
+        }
+
+        #back-top a {
+                width: 60px;
+                height: 60px;
+                display: block;
+                text-align: center;
+                font: 11px/100% Arial, Helvetica, sans-serif;
+                text-transform: uppercase;
+                text-decoration: none;
+                color: #FFFFFF;
+                background: #A9A9B1;
+                /* background color transition */
+                -webkit-transition: 1s;
+                -moz-transition: 1s;
+                transition: 1s;
+            }
+
+                #back-top a:hover {
+                    background: #fed136;
+                }
+            /* arrow icon (span tag) */
+            #back-top i {
+                margin-top: 15px;
+                font-size: 28px;
+            }
+
+        @media only screen and (min-width : 320px) and (max-width : 480px) {
+            #back-top {
+                position: fixed;
+                bottom: 10px;
+                right: 30px;
+            }
+
+                #back-top a {
+                    width: 40px;
+                    height: 40px;
+                }
+
+                #back-top i {
+                    margin-top: 7px;
+                    font-size: 20px;
+                }
+        }
+
+
+
+
+        .sh-side-options {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            z-index: 12345678902;
+            transition: 0.3s all ease;
+            transition: 0.2s all;
+            padding: 0 0;
+            width: 420px;
+            transform: translateX(420px);
+        }
+
+            .sh-side-options.open {
+                transform: translateX(0px);
+                box-shadow: 0 0px 39px 10px rgba(0,0,0,0.2);
+            }
+
+        .sh-side-options-container {
+            position: absolute;
+            top: 216px;
+            left: -75px;
+            width: 60px;
+            background-color: rgba(255,255,2555,1);
+            border-radius: 5px;
+            margin-right: 15px;
+            box-shadow: -10px 0px 20px 2px rgba(0,0,0,.06);
+        }
+
+
+        .sh-side-options.sh-side-options-pages .sh-side-options-container {
+            top: 150px;
+        }
+
+
+
+        .sh-side-options-item {
+            display: block;
+            text-align: center;
+            margin: 0px;
+            transition: 0.3s all ease-in-out;
+            position: relative;
+            padding: 7px;
+            cursor: pointer;
+        }
+
+            .sh-side-options-item:not(:last-child) {
+                border-bottom: 1px solid #f1f3fc;
+            }
+
+        .sh-side-options-item-container {
+            border-radius: 4px;
+            padding: 8px 0;
+        }
+
+        .sh-side-options-item:hover .sh-side-options-item-container,
+        .sh-side-options-item:focus .sh-side-options-item-container,
+        .sh-side-options.open .sh-side-options-item-trigger-demos .sh-side-options-item-container {
+            background-color: #f3f5fd;
+        }
+
+
+
+
+        .sh-side-options-item i {
+            font-size: 22px;
+        }
+
+        .sh-side-options-item:not(:hover):not(:focus) {
+            color: #9396a5 !important;
+        }
+
+        .sh-side-options-item:hover .sh-side-options-hover {
+            opacity: 1;
+            transform: translateX(-97%);
+        }
+
+        .sh-side-options-hover {
+            position: absolute;
+            background-color: #ffffff;
+            color: #32343d;
+            padding: 20px 26px;
+            transform: translateX(-70%);
+            left: 0px;
+            top: 0;
+            bottom: 0;
+            opacity: 0;
+            transition: 0.2s all ease-in-out;
+            z-index: -100;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            font-size: 13px;
+            box-shadow: 0px 0px 20px 2px rgba(0,0,0,0.08);
+        }
+
+            .sh-side-options-hover span {
+                padding: 0px 3px;
+            }
+
+        @media (max-width: 700px) {
+
+            .sh-side-options {
+                width: 52px;
+            }
+
+            .sh-side-options-item {
+                padding: 10px 0;
+            }
+
+                .sh-side-options-item i {
+                    font-size: 16px;
+                }
+        }
+
+        @media (max-width: 600px) {
+
+            .sh-side-options {
+                display: none;
+            }
+        }
+
+        @media (max-height: 500px) {
+            .sh-side-options {
+                top: 120px !important;
+            }
+        }
+
+
+        .sh-side-options-item i {
+            color: #9396a5 !important;
+        }
+
+        .sh-side-options.open .sh-side-options-item-trigger-demos i,
+        .sh-side-options-item:hover i,
+        .sh-side-options-item:focus i {
+            color: #294cff !important;
+        }
+
+
+
+        /*
+** Side Demos
+*/
+        .sh-side-demos-container {
+            top: 0;
+            left: 0;
+            right: -17px;
+            bottom: 0;
+            position: absolute;
+            overflow-y: scroll;
+            background-color: #fff;
+            background-repeat: no-repeat;
+            background-position: right top;
+            padding: 22px;
+        }
+
+        body.admin-bar .sh-side-demos-container {
+            top: 32px;
+        }
+
+
+        /* Demos Text */
+        .sh-side-demos-intro {
+            text-align: center;
+        }
+
+        .sh-side-demos-intro-title {
+            font-size: 24px;
+            font-weight: 300;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+
+            .sh-side-demos-intro-title img {
+                height: 24px;
+                top: -6px;
+                position: relative;
+            }
+
+        .sh-side-demos-intro-descr {
+            max-width: 250px;
+            margin: 0 auto;
+            display: table;
+            color: #838794;
+        }
+
+
+
+        /* Demos Close Button */
+        .sh-side-demos-container-close {
+            position: absolute;
+            top: 22px;
+            right: 22px;
+            cursor: pointer;
+        }
+
+            .sh-side-demos-container-close i {
+                color: #c5c5c5;
+                font-size: 18px;
+                transition: 0.3s all ease;
+            }
+
+            .sh-side-demos-container-close:hover i,
+            .sh-side-demos-container-close:focus i {
+                color: #7f7f7f;
+            }
+
+
+        /* Demo Items */
+        .sh-side-demos-loop-container {
+            position: relative;
+            margin: 0 -10px;
+            margin-top: 28px;
+        }
+
+        .sh-side-demos-item {
+            display: inline-block;
+            position: relative;
+            margin-right: -4px;
+            margin-bottom: 25px;
+            width: 50%;
+            padding: 0 10px;
+            text-align: center;
+            transition: .3s all ease;
+            top: 0;
+        }
+
+            .sh-side-demos-item:hover {
+                top: -4px;
+            }
+
+            .sh-side-demos-item .sh-image-lazy-loading {
+                border-radius: 3px;
+                box-shadow: 0 2px 20px 1px rgba(0,0,0,.1);
+            }
+
+            .sh-side-demos-item img {
+                border-radius: 3px;
+            }
+
+        .sh-side-demos-item-name {
+            font-size: 12px;
+            color: #32343d;
+            font-weight: 600;
+            padding-top: 10px;
+        }
+
+        .sh-side-demos-item-tag {
+            position: absolute !important;
+            width: auto !important;
+            height: auto !important;
+            top: 4px;
+            left: 6px;
+            background-color: #ff5944;
+            color: #fff;
+            font-size: 9px;
+            font-weight: 600;
+            display: block;
+            padding: 1px 9px;
+            text-transform: capitalize;
+            border-radius: 100px;
+        }   
+               
+    </style>
+</head>
+<body>
+
+    <div class="icon-pack1">
+        <ul>
+            <li><a href="tel:+917092696420"><i class="fa fa-phone"></i></a> </li>
+            <li><a href="mailto:selvamani.lee9@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i></a> </li>
+            <li><a><i class="fa fa-twitter" aria-hidden="true"></i></a> </li>           
+        </ul>
+    </div>
+    <header>
+        <div id="homelink">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+                <a class="navbar-brand" href="#"><img src="images/logo.png"/></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item first">
+                            <a class="nav-link page-scroll" href="#homelink">Home </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link page-scroll" href="#aboutlink">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link page-scroll" href="#projectslink">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link page-scroll" href="#contactlink">Contacts</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+    <section>
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="images/1.jpg" alt="First slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="images/2.jpg" alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="images/3.jpg" alt="Third slide">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+       
+        
+        <div id="aboutlink" style="margin-left: 5%; margin-right: 5%;">
+            <br /><br /><br />
+            <h1 style="text-align: center; color: yellowgreen;">About Us</h1>
+            <p class="text-justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Company Profile Examples : Make a Powerful Impact. ... A well-written company profile is an effective way to introduce the business to the potential customers and other stakeholders. A company profile is a professional introduction of the business and aims to inform the audience about its products and services.</p>
+            <p class="text-justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A well-written company profile is an effective way to introduce the business to the potential customers and other stakeholders</p>
+            <p class="text-justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Left aligned text on all viewport sizes.</p>
+            <i class="icon icon-eyeglass"></i>
+
+        </div>
+        
+        <div id="projectslink" style="margin-left: 5%; margin-right: 5%;">
+                  <br /><br /><br />
+                  <h1 style="text-align: center; color: yellowgreen;">Projects</h1><br />
+                  <div class="row" style="text-align: center;">
+                      <div class="col-md-3 col-lg-3 text-center">
+                          <div class="mz-module">
+                              <div class="mz-module-about">
+                                  <i class="fa fa-tablet color1 ot-circle"></i>
+                                  <h3>Web / App Development</h3>
+                                  <p class="text-justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;With the exploding popularity of smartphones and tablets, Web / Mobile application development is becoming a more and more popular medium of software creation. The creation of mobile applications draws much of its roots from traditional software development. We have set of skilled team to address customer's needs precisely</p><br />
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-md-3 col-lg-3">
+                          <div class="mz-module">
+                              <div class="mz-module-about">
+                                  <i class="fa fa-cloud color2 ot-circle"></i>
+                                  <h3>Internet Of Things</h3>
+                                  <p class="text-justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We have ability to turn any THING (a good/ object/ machine/ appliance/ building/ animal/ plant...) into a smart object. This smart object will in turn be able to connect, monitor, manage, control, search and more without the necessity for human intervention (almost automatically)</p><br /><br />
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-md-3 col-lg-3">
+                          <div class="mz-module">
+                              <div class="mz-module-about">
+                                  <i class="fa fa-cogs color4 ot-circle"></i>
+                                  <h3>Custom Solutions</h3>
+                                  <p class="text-justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We are good at designing of software applications for a specific user or group of users within an organization. Custom software is designed to address customer's needs precisely as opposed to the more traditional and widespread off-the-shelf softwares. These softwares are typically created for specific customer by our developers</p>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-md-3 col-lg-3 text-center">
+                          <div class="mz-module">
+                              <div class="mz-module-about">
+                                  <i class="fa fa-line-chart color3 ot-circle"></i>
+                                  <h3>Analytics</h3>
+                                  <p class="text-justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Our data analytics is primarily conducted in Internet of Things (IOT) applications. we collect and analyze data associated with customers, devices or practical experience. Data is categorized, stored and analyzed to study various trends and patterns. With evolving data we facilitate thorough decision-making</p><br />
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+        <div id="contact">
+            <div id="contactlink" style="margin-left: 5%; margin-right: 5%;">
+                <br /><br /><br />
+                <h1 style="text-align: center; color: yellowgreen;">Contacts</h1><br />
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 text-center">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3885.701919758397!2d80.09953441388507!3d13.118060290759896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5289d88af4598d%3A0xc6a341a27637c67!2sAvadi!5e0!3m2!1sen!2sin!4v1587363271099!5m2!1sen!2sin" width="400" height="150" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    </div><br />
+                    <div class="col-lg-6 col-md-6 text-center">
+                        <h4> Address <i class="fa fa-address-card" style="color:goldenrod" aria-hidden="true"></i> </h4>
+                        <address>
+                            No, 1st Main Street,<br />
+                            Main Road<br />
+                            Avaadi, Tiruvallur<br />
+                            Chennai - 600 071.<br /><br />
+                            <strong><i class="fa fa-phone" style="color:skyblue" aria-hidden="true"></i>&nbsp;&nbsp; 7092696420</strong> &nbsp;&nbsp;&nbsp;&nbsp;
+                            <strong><i class="fa fa-envelope" style="color:red" aria-hidden="true"></i>&nbsp;&nbsp; selvamani.lee9@gmail.com</strong><br />
+                        </address>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer id="footer" style="text-align: center">
+        <p>Copyright &copy; 2021, <span><strong>Company Name</strong></span>. All Rights Reserved.</p>
+    </footer>
+    <p id="back-top">
+        <a href="#homelink"><i class="fa fa-angle-up"></i></a>
+    </p>
+</body>
+</html>
